@@ -10,11 +10,27 @@ const server = http.createServer((req, res) => {
 
       res.end(data);
     });
-  } else if (["/login", "/signup", "/contact", "/service"].includes(req.url)) {
+  } else if ("/login" .includes(req.url)) {
     res.end(
       JSON.stringify({ message: `This is the ${req.url.substring(1)} route` })
     );
-  } else {
+  } 
+  else if ("/signup".includes(req.url)) {
+    res.end(
+      JSON.stringify({ message: `This is the ${req.url.substring(1)} route` })
+    );
+  }
+  else if ( "/contact".includes(req.url)) {
+    res.end(
+      JSON.stringify({ message: `This is the ${req.url.substring(1)} route` })
+    );
+  }
+  else if ("/service".includes(req.url)) {
+    res.end(
+      JSON.stringify({ message: `This is the ${req.url.substring(1)} route` })
+    );
+  }
+  else {
     res.end("404 Not Found");
   }
 });
