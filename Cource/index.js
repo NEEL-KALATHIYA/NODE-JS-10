@@ -15,23 +15,23 @@ app.get("/students/", async (req, res) => {
     res.send(data);
   }),
 
-  app.post("/students/", async (req, rse) => {
+  app.post("/students/", async (req, res) => {
     console.log(rse.body); 
-    rse.send("done");
+    res.send("done");
   }),
-  app.post("/students/", async (req, rse) => {
-    let data = await student.create(rse.body);
-    rse.send(data);
+  app.post("/students/", async (req, res) => {
+    let data = await student.create(res.body);
+    res.send(data);
   }),
   app.patch("/:id/", async (req, res) => {
     let {id}= req.params
-    let data = await student.findByIdAndUpdate(id,rse.body);
-    rse.send(data);
+    let data = await student.findByIdAndUpdate(id,res.body);
+    res.send(data);
   }),
-  app.delete("/:id/", async (req, rse) => {
+  app.delete("/:id/", async (req, res) => {
     let {id}= req.params
     let data = await student.findByIdAndDelete(id);
-    rse.send(data);
+    res.send(data);
   }),
 
   app.listen(8090, () => {
