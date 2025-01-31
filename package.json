@@ -10,7 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2",
+    "axios": "^1.7.9",
+    "create-mvc-structure": "^1.0.1",
+    "express": "^4.21.2",
+    "mongoos": "^0.0.1-security",
     "mongoose": "^8.6.1"
   }
 }
